@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404!</title>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    
+    <style>
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* صورة الجوال افتراضية */
+  background: url("Error-mobile.jpg") center center / cover no-repeat;
+}
+
+/* إذا الشاشة أكبر من 768px (يعني بي سي أو تابلت كبير) */
+@media (min-width: 769px) {
+  body {
+    background: url("Error.png") center center / cover no-repeat;
+  }
+}
+
+    </style>
+
+    
+<script>
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) {  // F12
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {  // Ctrl+Shift+I
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {  // Ctrl+Shift+J
+            return false;
+        }
+    }
+</script>
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>
