@@ -9,7 +9,44 @@
     <link rel="stylesheet" href="main.css">
     <title>Discord</title>
 </head>
+<style>
+/* ✅ كبر الفورم وخفف الميرج/القاب */
+.authBox{
+  width:100%;
+  max-width: 788px;     /* كان 980 */
+  display:flex;
+  gap:16px;              /* كان 24 */
+  align-items:stretch;
+}
 
+/* ✅ خلي الفورم ياخذ مساحة أكبر بكثير */
+.main-form{
+  flex: 1 1 390px;       /* كان 520px */
+  min-width: 0;
+}
+
+/* ✅ خلي الـ QR أضيق */
+.right-section{
+  flex: 0 1 250px;       /* كان 380px */
+  min-width: 0;
+}
+
+/* ✅ لو تبي داخل الفورم نفسه يتمدد بالكامل */
+#login-form{
+  width:100%;
+  max-width: 100%;
+}
+
+/* ✅ تابلت/جوال: خلي الحد أكبر شوي عشان الفورم ما يطلع ضيق */
+@media (max-width: 900px){
+  .authBox{
+    flex-direction:column;
+    max-width: 520px;    /* كان 520 */
+    gap:14px;
+  }
+}
+
+</style>
 <body>
     <img src="bg.svg" alt="Discord BG" class="bg">
     <div class="login-page">
